@@ -1,0 +1,78 @@
+{% extends "__base__.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="dashboard-content border-dashed p-3 m-4 view-height">
+    <form action="" method="POST" >
+                {% csrf_token %}
+    <div class="mt-4 ml-4 mr-4">
+        <div class="row border-bottom border-3">
+            <div class="col noPadding"><h3 class="color-header text-uppercase">Edycja
+                przepisu</h3></div>
+            <div class="col d-flex justify-content-end mb-2 noPadding">
+                <button type="submit"
+                        class="btn btn-success rounded-0 pt-1 pb-1 pr-5 pl-5">
+                    <b>Zapisz</b>
+                </button>
+            </div>
+        </div>
+        <div class="schedules-content">
+            <div class="schedules-content-header">
+                <div class="form-group row">
+                    <span class="col-sm-2 label-size col-form-label">
+                        Nazwa przepisu
+                    </span>
+                    <div class="col-sm-10">
+                        <input class="w-100 p-1" value="{{ recipe.name}}" name="name" id="name">
+                    </div>
+                </div>
+                <div class="form-group row" style="word-break: break-word; align-items: flex-start">
+                    <span class="col-sm-2 label-size col-form-label">
+                        Opis przepisu
+                    </span>
+                    <div class="col-sm-10">
+                        <textarea class="w-100 p-1" rows="5" id="description"
+                                  name="description">{{ recipe.description}}</textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span class="col-sm-2 label-size col-form-label">
+                        Przygotowanie (minuty)
+                    </span>
+                    <div class="col-sm-10">
+                        <input class="p-1" type="number" value="{{ recipe.preparation_time}}"
+                               name="preparation_time" id="preparation_time">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex">
+            <div class="col-5 border-bottom border-3"><h3
+                    class="text-uppercase">Sposób przygotowania</h3></div>
+            <div class="col-2"></div>
+            <div class="col-5 border-bottom border-3"><h3
+                    class="text-uppercase">Składniki</h3></div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-5 p-4">
+                <textarea class="w-100 p-1" rows="10" name="preparation_description"
+                          id="preparation_description">{{ recipe.preparation_description}}</textarea>
+            </div>
+            <div class="col-2"></div>
+
+            <div class="col-5 p-4">
+                <textarea class="w-100 p-1" rows="10" name="ingredients"
+                          id="ingredients">{{ recipe.ingredients}}</textarea>
+            </div>
+        </div>
+    </div>
+         {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger" role="Alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+    </form>
+</div>
+{% endblock content %}

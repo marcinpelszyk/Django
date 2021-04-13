@@ -1,0 +1,69 @@
+{% extends "__base__.html" %}
+
+{% block title %}Nowy przepis{% endblock %}
+
+{% block content %}
+<div class="dashboard-content border-dashed p-3 m-4 view-height">
+    <form action="" method="POST" >
+                {% csrf_token %}
+        <div class="row border-bottom border-3 p-1 m-1">
+            <div class="col noPadding"><h3 class="color-header text-uppercase">Nowy
+                przepis</h3></div>
+            <div class="col d-flex justify-content-end mb-2 noPadding">
+                <button type="submit"
+                        class="btn btn-success rounded-0 pt-1 pb-1 pr-5 pl-5">
+                    <b>Zapisz</b>
+                </button>
+            </div>
+        </div>
+
+        <table class="table borderless">
+            <tbody>
+
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Nazwa Przepisu</th>
+                <td class="col-7">
+                    <input class="form-control w-100 p-1" value="" id="name" name="name">
+                </td>
+            </tr>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Opis przepisu</th>
+                <td class="col-7">
+                    <textarea class="form-control w-100 p-1" rows="5" id="description" name="description"></textarea></td>
+            </tr>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Przygotowanie (minuty)</th>
+                <td class="col-3">
+                    <input class="form-control p-1" type="number" value="" id="preparation_time" name="preparation_time">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="row d-flex p-1 m-1">
+            <div class="col-5 border-bottom border-3"><h3
+                    class="text-uppercase">Sposób przygotowania</h3></div>
+            <div class="col-2"></div>
+            <div class="col-5 border-bottom border-3"><h3
+                    class="text-uppercase">Składniki</h3></div>
+        </div>
+        <div class="row d-flex p-1 m-1">
+            <div class="col-5">
+                <textarea class="form-control w-100 p-1" rows="10" id="preparation_description" name="preparation_description"></textarea>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <textarea class="form-control w-100 p-1" rows="10" id="ingredients" name="ingredients"></textarea>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger" role="Alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+    </form>
+
+</div>
+{% endblock content %}
