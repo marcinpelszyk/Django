@@ -11,20 +11,13 @@ class TestCategoriesModel(TestCase):
 
     def test_category_model_entry(self):
         """
-        Test Category model data insertion/types/field attributes
+        Test Category model data 
         """
         data = self.data1
         self.assertTrue(isinstance(data, Category))
         self.assertEqual(str(data), 'Wodka')
 
-    # def test_category_url(self):
-    #     """
-    #     Test category model slug and URL reverse
-    #     """
-    #     data = self.data1
-    #     response = self.client.post(
-    #         reverse('shop:all_products', args=[data.slug]))
-    #     self.assertEqual(response.status_code, 200)
+    
 
 
 
@@ -41,26 +34,10 @@ class TestProductsModel(TestCase):
 
     def test_products_model_entry(self):
         """
-        Test product model data insertion/types/field attributes
+        Test product model data 
         """
         data = self.data1
         self.assertTrue(isinstance(data, Product))
         self.assertEqual(str(data), 'wodka2')
 
-#     def test_products_url(self):
-#         """
-#         Test product model slug and URL reverse
-#         """
-#         data = self.data1
-#         url = reverse('shop:product_detail', args=[data.slug])
-#         self.assertEqual(url, '/item/wokda2/')
-#         response = self.client.post(
-#             reverse('shop:product_detail', args=[data.slug]))
-#         self.assertEqual(response.status_code, 200)
-
-#     def test_products_custom_manager_basic(self):
-#         """
-#         Test product model custom manager returns only active products
-#         """
-#         data = Product.objects.all()
-#         self.assertEqual(data.count(), 1)
+#     
