@@ -6,7 +6,7 @@ from django.test import Client, RequestFactory, TestCase
 from django.urls import reverse
 
 from store.models import Category, Product
-from store.views import all_products
+from store.views import product_all
 
 
 class TestViewResponse(TestCase):
@@ -28,7 +28,7 @@ class TestViewResponse(TestCase):
 
     def test_url_hosts(self):
         """
-        Test hosts
+        Test hosts URL
         """
         response = self.c.get('/')
         self.assertEqual(response.status_code, 200)
@@ -40,7 +40,6 @@ class TestViewResponse(TestCase):
         response = self.c.get(reverse('store:product_detail', args=['miod']))
         self.assertEqual(response.status_code, 200)
 
-
     def test_product_list_url(self):
         """
         Test product list url
@@ -48,12 +47,21 @@ class TestViewResponse(TestCase):
         response = self.c.get(reverse('store:category_list', args=['olej']))
         self.assertEqual(response.status_code, 200)
 
+    def test_url_allowed_hosts(self):
+        """
+        Test allowed hosts
+        """
+        response = self.c.get('/', HTTP_HOST='addres.pl')
+        self.assertEqual(response.status_code, 400)
+        response = self.c.get('/', HTTP_HOST='domena.pl')
+        self.assertEqual(response.status_code, 200)
+
     def test_homepage_html(self):
         """
-        Example: code validation, search HTML for text
+        Code validation search HTML for text
         """
         request = HttpRequest()
-        response = all_products(request)
+        response = product_all(request)
         html = response.content.decode('utf8')
         self.assertIn('<title>Home</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
@@ -61,12 +69,11 @@ class TestViewResponse(TestCase):
 
     def test_view_function(self):
         """
-        Example: Using request factory
+        Using request factory
         """
-        request = self.factory.get('/item/miod')
-        response = all_products(request)
+        request = self.factory.get('miod')
+        response = product_all(request)
         html = response.content.decode('utf8')
         self.assertIn('<title>Home</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)
-
