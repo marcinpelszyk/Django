@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.urls import reverse
-
-
 
 
 class ProductManager(models.Manager):
@@ -18,16 +18,16 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-    # def get_absolute_url(self):
-    #     return reverse('shop:category_list', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('store:category_list', args=[self.slug])
 
     def __str__(self):
         return self.name
-    
+
 
 class Product(models.Model):
     category = models.ForeignKey(
-        Category, 
+        Category,
         on_delete=models.CASCADE, related_name='products')
     created_by = models.ForeignKey(
         User,
@@ -48,39 +48,9 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
         ordering = ('-created',)
-    
+
     def get_absolute_url(self):
-        return reverse('shop:product_detail', args=[self.slug])
+        return reverse('store:product_detail', args=[self.slug])
 
     def __str__(self):
         return self.title
-
-
-class Comment(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    subject = models.CharField(max_length=50, blank=True)
-    comment = models.CharField(max_length=256, blank=True)
-    rate = models.PositiveSmallIntegerField(default=1)
-    active = models.BooleanField(default=True)
-    create_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.subject
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-

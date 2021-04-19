@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Sklep zielarski.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/7ff0aca7ae0666b4855a767543d266a5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/imagess.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/olejzlnu.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/Activate.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/activate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/activate.csh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/activate.fish" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/autopep8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/coverage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/coverage-3.8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/coverage3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/django-admin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/django-admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/easy_install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/easy_install-3.8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/flake8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/isort" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/isort-identify-imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pip3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pip3.8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pycodestyle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pyflakes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/python" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/python3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/sqlformat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/lib64" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/pyvenv.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/CacheControl-0.12.6-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/appdirs-1.4.3-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/certifi-2019.11.28-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/chardet-3.0.4-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/colorama-0.4.3-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/contextlib2-0.6.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/distlib-0.3.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/distro-1.4.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/html5lib-1.0.1-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/idna-2.8-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/ipaddr-2.2.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/lockfile-0.12.2-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/msgpack-0.6.2-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/packaging-20.3-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/pep517-0.8.2-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/pip-20.0.2-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/pkg_resources-0.0.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/progress-1.5-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/pyparsing-2.4.6-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/pytoml-0.1.21-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/requests-2.22.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/retrying-1.3.3-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/setuptools-44.0.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/six-1.14.0-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/urllib3-1.25.8-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/webencodings-0.5.1-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/share/python-wheels/wheel-0.34.2-py2.py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/migrations/0002_auto_20210418_1541.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/templates/store/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/templates/store/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/templates/store/products/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/templates/store/products/single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/tests/test_models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core/media/images/7ff0aca7ae0666b4855a767543d266a5_nwMfR15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core/media/images/imagess_MGRAY8N.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../core/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../core/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/migrations/0002_auto_20210417_1401.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/migrations/0003_auto_20210417_1453.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/migrations/0004_auto_20210417_1512.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/migrations/0005_auto_20210417_1533.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../core/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/templates/shop/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../core/shop/templates/shop/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/shop/templates/shop/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../core/shop/templates/shop/home.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rLZ7sm0f8Abm90ClYcDAJARkTR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store/templates/store" />
+      <recent name="$PROJECT_DIR$/store/templates/store/products" />
+      <recent name="$PROJECT_DIR$/store/tests" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Sklep zielarski" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="" />
+      <created>1618757165708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618757165708</updated>
+      <workItem from="1618757167485" duration="7812000" />
+      <workItem from="1618770344312" duration="5730000" />
+      <workItem from="1618811224558" duration="819000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
