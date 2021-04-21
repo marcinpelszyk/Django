@@ -67,13 +67,3 @@ class TestViewResponse(TestCase):
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)
 
-    def test_view_function(self):
-        """
-        Using request factory
-        """
-        request = self.factory.get('miod')
-        response = product_all(request)
-        html = response.content.decode('utf8')
-        self.assertIn('<title>Home</title>', html)
-        self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
-        self.assertEqual(response.status_code, 200)
