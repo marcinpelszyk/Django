@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/basket/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basket/tests/test_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/epylint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pylint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/pyreverse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/bin/symilar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/basket/css/basket.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/core/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/tests/test_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/tests/test_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/basket.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/tests/test_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/tests/test_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/basket/summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/products/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/products/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/products/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/products/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +28,31 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1rLZ7sm0f8Abm90ClYcDAJARkTR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -40,6 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -96,7 +128,8 @@
       <workItem from="1618824993087" duration="18472000" />
       <workItem from="1618857407798" duration="5044000" />
       <workItem from="1618922892042" duration="12570000" />
-      <workItem from="1619011139049" duration="7708000" />
+      <workItem from="1619011139049" duration="18398000" />
+      <workItem from="1619094338126" duration="7379000" />
     </task>
     <servers />
   </component>

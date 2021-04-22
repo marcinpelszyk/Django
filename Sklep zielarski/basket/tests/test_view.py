@@ -57,6 +57,6 @@ class TestBasketView(TestCase):
         Test updating items from the basket
         """
         response = self.client.post(
-            reverse('basket:basket_update'), {'productid': 2, 'productqty': 1,'action': 'post'}, xhr=True
+            reverse('basket:basket_update'), {'productid': 2, 'productqty': 1, 'action': 'post'}, xhr=True
         )
         self.assertEqual(response.json(), {'qty': 2, 'subtotal': '40.00'})
