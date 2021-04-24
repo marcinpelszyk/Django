@@ -2,21 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shop/bin/epylint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/bin/pylint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/bin/pyreverse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/bin/symilar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/basket/css/basket.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/core/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/tests/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/tokens.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/7ff0aca7ae0666b4855a767543d266a5_71aQeut.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/imagess_6f5RDwr.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/olejzlnu_yfxxVWs.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/registration/account_activation_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/registration/activation_invalid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/user/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Sklep zielarski.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sklep zielarski.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/basket.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/tests/test_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/tests/test_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/migrations/0002_auto_20210418_1541.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/migrations/0003_auto_20210419_0620.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/migrations/0004_auto_20210419_0622.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/store/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/basket/summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/store/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/store/products/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/products/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/store/products/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/products/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basket/summary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,13 +98,15 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/account/tests" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/store/templates/store" />
       <recent name="$PROJECT_DIR$/store/templates/store/products" />
-      <recent name="$PROJECT_DIR$/store/tests" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +148,10 @@
       <workItem from="1618857407798" duration="5044000" />
       <workItem from="1618922892042" duration="12570000" />
       <workItem from="1619011139049" duration="18398000" />
-      <workItem from="1619094338126" duration="7379000" />
+      <workItem from="1619094338126" duration="11163000" />
+      <workItem from="1619108094092" duration="5789000" />
+      <workItem from="1619179864750" duration="5881000" />
+      <workItem from="1619261674766" duration="18925000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,9 @@
+{% extends '../store/base.html' %}
+
+{% block content %}
+  <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Aktywacja się nieudała</h4>
+    <p><a href="{% url 'account:register' %}" class="alert-link">Przejdź do Rejestracji</a></p>
+    <hr>
+  </div>
+{% endblock %}

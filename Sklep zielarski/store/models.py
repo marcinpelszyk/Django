@@ -1,7 +1,5 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 from django.urls import reverse
 
 
@@ -30,7 +28,7 @@ class Product(models.Model):
         Category,
         on_delete=models.CASCADE, related_name='products')
     created_by = models.ForeignKey(
-        User,
+        settings.AUTH_USER_MODEL,
         related_name='product_create', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=255, default='admin')

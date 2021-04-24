@@ -1,0 +1,6 @@
+{% autoescape off %}
+Cześć {{ user.name }},
+Twoje konto zostało pomyślnie utworzone. Kliknij poniższy link, aby aktywować swoje konto
+
+http://{{ domain }}{% url 'account:activate' uidb64=uid token=token %}
+{% endautoescape %}
