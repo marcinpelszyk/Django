@@ -50,7 +50,7 @@ class RegistrationForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data['email']
         if UserBase.objects.filter(email=email).exists():
-            raise forms.ValidationError('użyj innego adresu e-mail, który jest już zajęty')
+            raise forms.ValidationError('użyj innego adresu e-mail')
         return email
 
 
@@ -65,6 +65,32 @@ class RegistrationForm(forms.ModelForm):
         self.fields['password2'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Powtórz hasło'})
 
+class UserEditForm(forms.ModelForm):
+
+    email = forms.EmailField(
+        label='Adres e-mail konta (nie można go zmienić)', max_length=200, widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'E-mail', 'id': 'form-email', 'readonly': 'readonly'}))
+    user_name = forms.CharField(
+        label='Nazwa użytkownika', min_length=4, max_length=50, widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'Nazwa użytkownika', 'id': 'form-firstname',
+                   'readonly': 'readonly'}))
+    first_name = forms.CharField(
+        label='Imię', min_length=4, max_length=50, widget=forms.TextInput(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'imię', 'id': 'form-lastname'}))
+    about = forms.CharField(
+        label='O sobie:', max_length=500, widget=forms.Textarea(
+            attrs={'class': 'form-control mb-3', 'placeholder': 'Coś o sobie', 'id': 'form-about'}))
+
+    class Meta:
+        model = UserBase
+        fields = ('email', 'user_name', 'first_name', 'about')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user_name'].required = True
+        self.fields['email'].required = True
+        self.fields['about'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Coś o sobie'})
 
 
 

@@ -1,6 +1,6 @@
 {% extends "../../store/base.html" %}
 {% load static %}
-{% block title %}Basket Summary{%endblock %}
+{% block title %}Panel Użytkownika{%endblock %}
 
 {% block content %}
 
@@ -11,7 +11,7 @@
     </div>
     <div class="col-12 d-flex justify-content-between">
       <div>Zarządzaj swoimi <b> zamówieniami </b> i danymi osobowymi </div>
-      <div><a href="#">Zmień szczegóły </a></div>
+      <div><a href="{% url 'account:edit_details' %}">Zmień szczegóły </a></div>
     </div>
     <hr />
   </div>

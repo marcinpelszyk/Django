@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/account/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/user/delete_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/user/edit_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/user/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basket/summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/store/products/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/store/products/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +139,7 @@
       <workItem from="1619108094092" duration="5789000" />
       <workItem from="1619179864750" duration="5881000" />
       <workItem from="1619261674766" duration="20712000" />
-      <workItem from="1619347612198" duration="4554000" />
+      <workItem from="1619347612198" duration="13309000" />
     </task>
     <servers />
   </component>
