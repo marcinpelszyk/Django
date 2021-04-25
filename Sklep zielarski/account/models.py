@@ -18,10 +18,10 @@ class CustomAccountManager(BaseUserManager):
             raise ValueError(
                 'Superuser must be assigned to is_staff=True.'
             )
-        if other_fields.get('in_superuser') is not True:
-            raise ValueError(
-                'Superuser must br assigned to is_superuser=True.'
-            )
+        # if other_fields.get('in_superuser') is not True:
+        #     raise ValueError(
+        #         'Superuser must br assigned to is_superuser=True.'
+        #     )
 
         return self.create_user(email, user_name, password, **other_fields)
 
