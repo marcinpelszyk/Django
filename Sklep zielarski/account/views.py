@@ -16,6 +16,7 @@ from .tokens import account_activation_token
 def dashboard(request):
     return render(request, 'account/user/dashboard.html')
 
+
 @login_required
 def edit_details(request):
 
@@ -29,6 +30,7 @@ def edit_details(request):
 
     return render(request, 'account/user/edit_details.html', {'user_form': user_form})
 
+
 @login_required
 def delete_user(request):
     user = UserBase.objects.get(user_name=request.user)
@@ -36,6 +38,7 @@ def delete_user(request):
     user.save()
     logout(request)
     return redirect('account:delete_confirmation')
+
 
 def account_register(request):
 

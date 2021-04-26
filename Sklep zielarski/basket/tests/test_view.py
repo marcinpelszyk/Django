@@ -7,7 +7,7 @@ from store.models import Category, Product
 
 class TestBasketView(TestCase):
     def setUp(self):
-        User.objects.create(username='admin')
+        User.objects.create(email='marek@b.com')
         Category.objects.create(name='olej', slug='olej')
         Product.objects.create(category_id=1, title='miod', created_by_id=1,
                                slug='miod', price='20.00', image='sss')
