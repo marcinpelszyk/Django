@@ -19,7 +19,6 @@ class UserLoginForm(AuthenticationForm):
 
 
 class RegistrationForm(forms.ModelForm):
-
     user_name = forms.CharField(
         label='Wpisz nazwe użytkownika', min_length=4, max_length=50, help_text='Wymagany'
     )

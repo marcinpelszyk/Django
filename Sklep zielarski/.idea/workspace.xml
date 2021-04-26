@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/account/user/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/user/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/user/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/user/rest_status.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/payment/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stripe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stripe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/payment/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/tests/test_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/tests/test_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basket/summary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -79,6 +87,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/account/tests" />
@@ -140,7 +151,7 @@
       <workItem from="1619261674766" duration="20712000" />
       <workItem from="1619347612198" duration="14649000" />
       <workItem from="1619373165553" duration="9121000" />
-      <workItem from="1619439003125" duration="297000" />
+      <workItem from="1619439003125" duration="16193000" />
     </task>
     <servers />
   </component>
