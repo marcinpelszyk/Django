@@ -2,23 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/payment/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/payment/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stripe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stripe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/payment/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/0002_auto_20210426_1914.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/migrations/0002_auto_20210428_1122.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/payment/orderplaced.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/basket.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basket/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basket/summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/payment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/payment/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stripe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stripe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/user/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/user/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/payment/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/payment/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -151,7 +160,10 @@
       <workItem from="1619261674766" duration="20712000" />
       <workItem from="1619347612198" duration="14649000" />
       <workItem from="1619373165553" duration="9121000" />
-      <workItem from="1619439003125" duration="16193000" />
+      <workItem from="1619439003125" duration="21643000" />
+      <workItem from="1619520973707" duration="6945000" />
+      <workItem from="1619541862228" duration="13390000" />
+      <workItem from="1619604939459" duration="6742000" />
     </task>
     <servers />
   </component>

@@ -5,11 +5,11 @@ from django.urls import reverse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'y!s0@yg!qtctjm2di41th1x5lq9*vp%z(pzs#tw@levpv_tnku'
+# SECRET_KEY = 'y!s0@yg!qtctjm2di41th1x5lq9*vp%z(pzs#tw@levpv_tnku'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['domena.pl', '127.0.0.1']
+ALLOWED_HOSTS = ['domena.pl', '127.0.0.1', 'localhost']
 
 
 INSTALLED_APPS = [
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'basket',
     'account',
     'payment',
+    'orders',
 ]
 
 
@@ -117,6 +118,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Basket session ID
 BASKET_SESSION_ID = 'basket'
+
+# Stripe Payment
+PUBLISHABLE_KEY = 'pk_test_51IkV3IA1ugarFvwDwxTfCAAlpwPESyb7bZhcJM6izzssJ73elxmmfkPSgLBMf1OqAHzsP1AZ7hLEeeLkqo2dfRkg00fhy11ZVb'
+SECRET_KEY = 'sk_test_51IkV3IA1ugarFvwDRuIVgraExBX4F5KvVWEh3d58NS0q8rDnCK01ES06uJ1tH1sHO5CAIrjj4UfAvJQvASs4taHE00UyQeTt9h'
+STRIPE_ENDPOINT_SECRET = 'whsec_ohNazG5mTCUwagZHg7y0861I91I6b4Bm'
+# stripe listen --forward-to localhost:8000/payment/webhook/
 
 # Custom user model
 AUTH_USER_MODEL = 'account.UserBase'

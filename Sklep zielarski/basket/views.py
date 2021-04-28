@@ -47,3 +47,4 @@ def basket_update(request):
         baskettotal = basket.get_total_price()
         response = JsonResponse({'qty': basketqty, 'subtotal': baskettotal})
         return response
+

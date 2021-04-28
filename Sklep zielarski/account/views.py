@@ -10,16 +10,18 @@ from django.http import HttpResponse
 from .forms import RegistrationForm, UserEditForm
 from .models import UserBase
 from .tokens import account_activation_token
+from orders.views import user_orders
 
 
 @login_required
 def dashboard(request):
-    return render(request, 'account/user/dashboard.html')
+    orders = user_orders(request)
+    return render(request, 'account/user/dashboard.html', {'orders': orders})
+
 
 
 @login_required
 def edit_details(request):
-
     if request.method == 'POST':
         user_form = UserEditForm(instance=request.user, data=request.POST)
 
@@ -59,9 +61,10 @@ def account_register(request):
                 'token': account_activation_token.make_token(user),
             })
             user.email_user(subject=subject, message=message)
-            return HttpResponse('registered succesfully and activation sent')
+            return HttpResponse('zarejestrowano pomyślnie i wysłano aktywację')
     else:
         registerForm = RegistrationForm()
+
     return render(request, 'account/registration/register.html', {'form': registerForm})
 
 

@@ -2,6 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 
+User = settings.AUTH_USER_MODEL
+
 
 class ProductManager(models.Manager):
     def get_queryset(self):
@@ -28,7 +30,7 @@ class Product(models.Model):
         Category,
         on_delete=models.CASCADE, related_name='products')
     created_by = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        User,
         related_name='product_create', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=255, default='admin')
