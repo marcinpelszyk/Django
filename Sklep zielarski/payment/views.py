@@ -11,6 +11,10 @@ from basket.basket import Basket
 from orders.views import payment_confirmation
 
 
+class Error(TemplateView):
+    template_name = 'payment/error.html'
+
+
 def order_placed(request):
     basket = Basket(request)
     basket.clear()
@@ -50,7 +54,6 @@ def stripe_webhook(request):
     # Handle the event
     if event.type == 'payment_intent.succeeded':
         payment_confirmation(event.data.object.client_secret)
-
     else:
         print(f'Unhandled event type {event.type}')
 

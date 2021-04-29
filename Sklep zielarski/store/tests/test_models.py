@@ -1,8 +1,10 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.test import TestCase
 from django.urls import reverse
 
 from store.models import Category, Product
+
+User = settings.AUTH_USER_MODEL
 
 
 class TestCategoriesModel(TestCase):
