@@ -11,7 +11,7 @@ def product_all(request):
 
 def category_list(request, category_slug=None):
     category = get_object_or_404(Category, slug=category_slug)
-    products = Product.objects.filter(category=category)
+    products = Product.products.filter(category=category)
     paginator = Paginator(products, 10)
     page = request.GET.get('page')
     try:

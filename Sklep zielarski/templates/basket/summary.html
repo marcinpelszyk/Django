@@ -1,13 +1,9 @@
-{% extends "base.html" %}
+{% extends "../base.html" %}
 {% load static %}
-
-{% block stylesheet %}<link rel="stylesheet" href="{% static 'basket/css/basket.cc' %}">{% endblock %}
-{% block title %}Podsumowanie koszyka{% endblock %}
+{% block title %}Podsumowanie koszyka{%endblock %}
 
 {% block content %}
 
-
-<main class="pt-5">
   <div class="container">
     <div class="col-12">
       <h1 class="h2">Twój koszyk</h1>
@@ -18,8 +14,10 @@
     <hr />
   </div>
   <div class="container">
-
     <div class="row g-3">
+      {% if basket|length == 0 %}
+      <div class="col-12">Twój koszyk jest pusty <a href="{% url 'store:store_home' %}">Sklep</a></div>
+      {% else %}
       <div class="col-12 bg-light p-3 d-flex justify-content-between">
         <div class="d-flex d-flex-inline">
           <div class="pe-3">Zamówienie</div>
@@ -74,7 +72,7 @@
                   <p class="card-text pb-3">{{product.title}}</p>
                 </a>
                     <label for="select">ilość</label>
-                    <select id="select{{product.id}}" style="width:50px;height:31px;">
+                    <select id="select{{product.id}}">
                       <option value="" selected disabled hidden>{{item.qty}}</option>
                       <option value="">1</option>
                       <option value="">2</option>
@@ -90,10 +88,9 @@
         {% endwith %}
         {% endfor %}
       </div>
+      {% endif %}
     </div>
-
   </div>
-</main>
 
 <script>
   // Delete Item
@@ -139,4 +136,5 @@
     });
   })
 </script>
+
 {% endblock %}
