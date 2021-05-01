@@ -5,7 +5,7 @@ from django.urls import reverse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECRET_KEY = 'y!s0@yg!qtctjm2di41th1x5lq9*vp%z(pzs#tw@levpv_tnku'
+SECRET_KEY = 'y!s0@yg!qtctjm2di41th1x5lq9*vp%z(pzs#tw@levpv_tnku'
 
 DEBUG = True
 
@@ -22,8 +22,8 @@ INSTALLED_APPS = [
     'store',
     'basket',
     'account',
-    'payment',
     'orders',
+    'payment',
 ]
 
 
@@ -120,9 +120,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 BASKET_SESSION_ID = 'basket'
 
 # Stripe Payment
-PUBLISHABLE_KEY = 'pk_test_51IkV3IA1ugarFvwDwxTfCAAlpwPESyb7bZhcJM6izzssJ73elxmmfkPSgLBMf1OqAHzsP1AZ7hLEeeLkqo2dfRkg00fhy11ZVb'
-SECRET_KEY = 'sk_test_51IkV3IA1ugarFvwDRuIVgraExBX4F5KvVWEh3d58NS0q8rDnCK01ES06uJ1tH1sHO5CAIrjj4UfAvJQvASs4taHE00UyQeTt9h'
-STRIPE_ENDPOINT_SECRET = 'whsec_ohNazG5mTCUwagZHg7y0861I91I6b4Bm'
+os.environ.setdefault('STRIPE_PUBLISHABLE_KEY', 'pk_test_51IkV3IA1ugarFvwDwxTfCAAlpwPESyb7bZhcJM6izzssJ73elxmmfkPSgLBMf1OqAHzsP1AZ7hLEeeLkqo2dfRkg00fhy11ZVb')
+STRIPE_SECRET_KEY = 'sk_test_51IkV3IA1ugarFvwDRuIVgraExBX4F5KvVWEh3d58NS0q8rDnCK01ES06uJ1tH1sHO5CAIrjj4UfAvJQvASs4taHE00UyQeTt9h'
 # stripe listen --forward-to localhost:8000/payment/webhook/
 
 # Custom user model
