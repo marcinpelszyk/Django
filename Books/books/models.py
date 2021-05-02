@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Author(models.Model):
+    
     objects = models.Manager()
     name = models.CharField(null=False, blank=False, max_length=255)
 
