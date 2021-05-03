@@ -18,12 +18,10 @@ class Order(models.Model):
     total_paid = models.DecimalField(max_digits=5, decimal_places=2)
     order_key = models.CharField(max_length=200)
     billing_status = models.BooleanField(default=False)
-    objects = models.Manager()
-
 
     class Meta:
         ordering = ('-created',)
-
+    
     def __str__(self):
         return str(self.created)
 
@@ -37,7 +35,7 @@ class OrderItem(models.Model):
                                 on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
-    objects = models.Manager()
 
     def __str__(self):
         return str(self.id)
+

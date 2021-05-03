@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40868fe0-cf73-4483-8fe7-98d8b5024455" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Books/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Books/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Books/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Books/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/migrations/0002_auto_20210426_1914.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/_documentation/packages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0002_auto_20210428_1122.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stripe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_documentation/stripe.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +92,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_documentation" />
       <recent name="$PROJECT_DIR$/templates/account" />
       <recent name="$PROJECT_DIR$/templates/account/password_reset" />
       <recent name="$PROJECT_DIR$/static/store/css" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/templates/store" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.summary.html">
@@ -150,7 +161,7 @@
       <workItem from="1619806171158" duration="5629000" />
       <workItem from="1619870499963" duration="9794000" />
       <workItem from="1619939896060" duration="5690000" />
-      <workItem from="1619952374280" duration="5010000" />
+      <workItem from="1619952374280" duration="8906000" />
     </task>
     <servers />
   </component>

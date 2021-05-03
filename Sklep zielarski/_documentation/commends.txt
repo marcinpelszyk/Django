@@ -1,0 +1,4 @@
+# Migrations 
+python manage.py showmigrations
+
+./manage.py graph_models --pydot -a -g -o my_project_visualized.png
