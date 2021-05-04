@@ -2,7 +2,32 @@ from django import forms
 from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
                                        SetPasswordForm)
 
-from .models import UserBase
+from .models import Customer, Address
+
+class UserAddressForm(forms.ModelForm):
+    class Meta:
+        model = Address
+        fields = ["full_name", "phone", "address_line", "address_line2", "town_city", "postcode"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["full_name"].widget.attrs.update(
+            {"class": "form-control mb-2 account-form", "placeholder": "Imię i Nazwisko"}
+        )
+        self.fields["phone"].widget.attrs.update({"class": "form-control mb-2 account-form", "placeholder": "Telefon"})
+        self.fields["address_line"].widget.attrs.update(
+            {"class": "form-control mb-2 account-form", "placeholder": "adres"}
+        )
+        self.fields["address_line2"].widget.attrs.update(
+            {"class": "form-control mb-2 account-form", "placeholder": "adres"}
+        )
+        self.fields["town_city"].widget.attrs.update(
+            {"class": "form-control mb-2 account-form", "placeholder": "Miasto"}
+        )
+        self.fields["postcode"].widget.attrs.update(
+            {"class": "form-control mb-2 account-form", "placeholder": "kod pocztowy"}
+        )
+
 
 
 class UserLoginForm(AuthenticationForm):
@@ -26,18 +51,18 @@ class RegistrationForm(forms.ModelForm):
     )
     email = forms.EmailField(
         max_length=100, help_text='Wymagane',
-        error_messages={'required': 'Przepraszamy, będziesz potrzebować e-maila '}
+        error_messages={'required': 'Przepraszamy, będziesz potrzebować e-maila'}
     )
     password = forms.CharField(label='Hasło', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Powtórz hasło', widget=forms.PasswordInput)
 
     class Meta:
-        model = UserBase
+        model = Customer
         fields = ('user_name', 'email',)
 
     def clean_username(self):
         user_name = self.cleaned_data['user_name'].lower()
-        r = UserBase.objects.filter(user_name=user_name)
+        r = Customer.objects.filter(user_name=user_name)
         if r.count():
             raise forms.ValidationError('Nazwa użytkowanika już istnieje')
         return user_name
@@ -50,7 +75,7 @@ class RegistrationForm(forms.ModelForm):
 
     def clean_email(self):
         email = self.cleaned_data['email']
-        if UserBase.objects.filter(email=email).exists():
+        if Customer.objects.filter(email=email).exists():
             raise forms.ValidationError('użyj innego adresu e-mail')
         return email
 
@@ -78,20 +103,15 @@ class UserEditForm(forms.ModelForm):
     first_name = forms.CharField(
         label='Imię', min_length=4, max_length=50, widget=forms.TextInput(
             attrs={'class': 'form-control mb-3', 'placeholder': 'imię', 'id': 'form-lastname'}))
-    about = forms.CharField(
-        label='O sobie:', max_length=500, widget=forms.Textarea(
-            attrs={'class': 'form-control mb-3', 'placeholder': 'Coś o sobie', 'id': 'form-about'}))
 
     class Meta:
-        model = UserBase
-        fields = ('email', 'user_name', 'first_name', 'about')
+        model = Customer
+        fields = ('email', 'user_name', 'first_name',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['user_name'].required = True
         self.fields['email'].required = True
-        self.fields['about'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'Coś o sobie'})
 
 
 class PwdResetForm(PasswordResetForm):
@@ -100,7 +120,7 @@ class PwdResetForm(PasswordResetForm):
     ))
     def clean_email(self):
         email = self.cleaned_data['email']
-        u = UserBase.objects.filter(email=email)
+        u = Customer.objects.filter(email=email)
         if not u:
             raise forms.ValidationError(
                 'Niestety nie możemy znaleźć tego adresu e-mail'

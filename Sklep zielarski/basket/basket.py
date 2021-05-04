@@ -7,8 +7,7 @@ from store.models import Product
 
 class Basket():
     """
-    A base Basket class, providing some default behaviors that
-    can be inherited or overrided, as necessary.
+    A base Basket class
     """
 
     def __init__(self, request):

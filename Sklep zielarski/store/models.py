@@ -66,6 +66,12 @@ class Product(models.Model):
     """
     The Product table contining all product items.
     """
+    # TAX_RATES_BY_STATE = (
+    #     (1, 0.23),
+    #     (2, 0.08),
+    #     (3, 0.05),
+    #     (4, 0.00),
+    # )
 
     product_type = models.ForeignKey(ProductType, on_delete=models.RESTRICT)
     category = models.ForeignKey(Category, on_delete=models.RESTRICT)
@@ -103,6 +109,7 @@ class Product(models.Model):
         help_text=_('Change product visiblilty'),
         default=True,
     )
+    # tax_rate = models.FloatField(choices=TAX_RATES_BY_STATE)
     created_at = models.DateTimeField(_('Created at'), auto_now_add=True, editable=False)
     update_at = models.DateTimeField(_('Updated at'), auto_now=True)
 
@@ -110,6 +117,10 @@ class Product(models.Model):
         ordering = ('-created_at',)
         verbose_name = _("Product")
         verbose_name_plural = _("Products")
+
+    # @property
+    # def adding_tax(self):
+    #     return self.reqular_price * (1 + self.TAX_RATES_BY_STATE[self.tax_rate])
 
     def __str__(self):
         return self.title
