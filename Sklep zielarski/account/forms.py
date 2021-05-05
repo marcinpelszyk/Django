@@ -83,7 +83,7 @@ class RegistrationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['user_name'].widget.attrs.update(
-            {'class': 'form-control mb-3', 'placeholder': 'Nazwa użytkownika'})
+            {'class': '', 'placeholder': 'Nazwa użytkownika'})
         self.fields['email'].widget.attrs.update(
             {'class': 'form-control mb-3', 'placeholder': 'E-mail', 'name': 'email', 'id': 'id_email'})
         self.fields['password'].widget.attrs.update(

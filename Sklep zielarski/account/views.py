@@ -137,7 +137,4 @@ def set_default(request, id):
 
 
 
-            
-
-
-
+    
