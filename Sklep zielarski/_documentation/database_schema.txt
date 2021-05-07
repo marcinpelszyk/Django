@@ -1,6 +1,7 @@
 https://dbdiagram.io/d
 
 
+
 Table category as C {
   id int [pk, increment]
   name varchar
@@ -43,6 +44,7 @@ Table ProductSpecificationValue as PSV {
   specification int
   value varchar
 }
+
 Ref: P.id < PSV.product
 Ref: PS.id < PSV.specification
 
@@ -54,35 +56,16 @@ Table ProductImage as PI {
   created_at timestamp
   updated_at timestamp
 }
+
 Ref: P.id < PI.product
 
-
-# Customer and Address
-
-Table Customer as C {
+Table Customer as Cu {
   id int [pk, increment]
   email email
   name varchar
   mobile varchar
-  password password
-  is_active boolean
-  is_staff boolean
-  created_at timestamp
-  updated_at timestamp
+  is_active int
+  is_staff int
+  created datetime
+  updated datetime
 }
-
-Table Address as A {
-  id int [pk, increment]
-  customer int
-  country_region varchar
-  phone varchar
-  postcode varchar
-  address_line varchar
-  address_line2 varchar
-  delivery_instructions varchar
-  created_at timestamp
-  updated_at timestamp
-  default boolean
-}
-
-Ref: C.id < A.customer 

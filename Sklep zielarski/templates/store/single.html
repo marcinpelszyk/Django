@@ -9,6 +9,13 @@
 
 
   <div class="container">
+  {% if messages %}
+    <div class="alert alert-warning" alert-{{ message.tags }}" role="alert">
+    {% for message in messages  %}
+     {{message|safe}} - <a href="{% url "account:favoritelist" %}" class="alert-link">Twoje ulubione produkty</a>.
+    {% endfor %}
+    </div>
+    {% endif %}
 
     <div class="row g-3">
         <div class="col-md-5 ps-3 col-lg-5 order-md-last p-0 order-1">
@@ -28,7 +35,7 @@
             </div>
             <hr>
             <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Dodaj do koszyka</button>
-            <button type="button" id="add-butto" value="{{product.id}}" class="btn btn-light fw500">Dodaj do ulubionych</button>
+            <a href="{% url 'account:user_favorite' product.id %}" class="btn btn-light fw500" tabindex="-1" role="button" aria-disabled="true">Dodaj do ulubionych</a>
             </div>
         </div>
 

@@ -1,4 +1,6 @@
 from decimal import Decimal
+
+from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -114,6 +116,7 @@ class Product(models.Model):
     tax_rate = models.DecimalField(max_digits=6, decimal_places=2, choices=TAX_RATES_BY_STATE)
     created_at = models.DateTimeField(_('Created at'), auto_now_add=True, editable=False)
     update_at = models.DateTimeField(_('Updated at'), auto_now=True)
+    users_favorite = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='user_favorite', blank=True)
 
     class Meta:
         ordering = ('-created_at',)
