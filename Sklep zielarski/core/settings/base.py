@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'orders',
     'django_extensions',
     'mptt',
+    'checkout',
+    
 ]
 
 
@@ -120,10 +122,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Basket session ID
 BASKET_SESSION_ID = 'basket'
 
-# Stripe Payment
-os.environ.setdefault('STRIPE_PUBLISHABLE_KEY', 'pk_test_51IkV3IA1ugarFvwDwxTfCAAlpwPESyb7bZhcJM6izzssJ73elxmmfkPSgLBMf1OqAHzsP1AZ7hLEeeLkqo2dfRkg00fhy11ZVb')
-STRIPE_SECRET_KEY = 'sk_test_51IkV3IA1ugarFvwDRuIVgraExBX4F5KvVWEh3d58NS0q8rDnCK01ES06uJ1tH1sHO5CAIrjj4UfAvJQvASs4taHE00UyQeTt9h'
-# stripe listen --forward-to localhost:8000/payment/webhook/
 
 # Custom user model
 AUTH_USER_MODEL = 'account.Customer'

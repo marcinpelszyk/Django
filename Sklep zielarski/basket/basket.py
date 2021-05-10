@@ -3,6 +3,7 @@ from decimal import Decimal
 from django.conf import settings
 
 from store.models import Product
+from checkout.models import DeliveryOptions
 
 
 class Basket():
@@ -65,17 +66,30 @@ class Basket():
     def get_subtotal_price(self):
         return sum(Decimal(item['price']) * item['qty'] for item in self.basket.values())
 
+    def get_delivery_price(self):
+        newprice = 0.00
+
+        if 'purchase' in self.session:
+            newprice = DeliveryOptions.objects.get(id=self.session['purchase']['delivery_id']).delivery_price
+
+        return newprice
+
     def get_total_price(self):
+        newprice = 0.00
+        subtotal = sum(Decimal(item["price"]) * item["qty"] for item in self.basket.values())
 
-        subtotal = sum(Decimal(item['price']) * item['qty'] for item in self.basket.values())
+        if "purchase" in self.session:
+            newprice = DeliveryOptions.objects.get(id=self.session["purchase"]["delivery_id"]).delivery_price
 
-        if subtotal == 0:
-            shipping = Decimal(0.00)
-        else:
-            shipping = Decimal(10.50)
-
-        total = subtotal + Decimal(shipping)
+        total = subtotal + Decimal(newprice)
         return total
+
+    def basket_update_delivery(self, deliveryprice=0):
+        subtotal = sum(Decimal(item['price']) * item['qty'] for item in self.basket.values())
+        total = subtotal + Decimal(deliveryprice)
+        return total
+
+
 
     def delete(self, product):
         """
@@ -90,6 +104,8 @@ class Basket():
     def clear(self):
         # Remove basket from session
         del self.session[settings.BASKET_SESSION_ID]
+        del self.session['address']
+        del self.session['purchase']
         self.save()
 
     def save(self):

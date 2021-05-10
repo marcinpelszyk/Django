@@ -9,6 +9,7 @@ from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
 from orders.views import user_orders
+from orders.models import Order
 from store.models import Product
 
 from .forms import RegistrationForm, UserAddressForm, UserEditForm
@@ -143,16 +144,30 @@ def edit_address(request, id):
         address_form = UserAddressForm()
         return render(request, 'account/dashboard/edit_addresses.html', {'form': address_form})
 
+
 @login_required
 def delete_address(request, id):
     address = Address.objects.filter(pk=id, customer=request.user).delete()
     return redirect('account:addresses')
 
+
 @login_required
 def set_default(request, id):
     Address.objects.filter(customer=request.user, default=True).update(default=False)
     Address.objects.filter(pk=id, customer=request.user).update(default=True)
+
+    previous_url = request.META.get('HTTP_REFERER')
+
+    if 'delivery_address' in previous_url:
+        return redirect('checkout:delivery_address')
+
     return redirect('account:addresses')
+
+@login_required
+def user_orders(request):
+    user_id = request.user.id
+    orders = Order.objects.filter(user_id=user_id).filter(billing_status=True)
+    return render(request, 'account/dashboard/user_orders.html', {'orders': orders})
             
 
 
