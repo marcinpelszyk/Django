@@ -1,0 +1,12 @@
+# Migrations 
+python manage.py showmigrations
+
+./manage.py graph_models --pydot -a -g -o my_project_visualized.png
+
+# PayPal
+pip install paypal-checkout-serversdk
+
+# Session 
+from django.contrib.sessions.models import Session
+s = Session.objects.get(pk='ye8evivr1r9rbdgj8tkkbtqr33t7fr56')
+s.get_decoded()

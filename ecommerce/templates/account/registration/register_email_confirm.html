@@ -1,0 +1,17 @@
+{% extends "../sub_base.html" %}
+{% block title %}Zarejestruj Konto{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div>
+        <h3 class = "mb-4"> Wysłano wiadomość e-mail dotyczącą konta </h3>
+         <p> Sprawdź pocztę, aby aktywować konto </p>
+        {% if 'complete' in request.get_full_path %}
+        <h3 class="mb-4">Hasłó zostało zmienione</h3>
+        <a href="{% url 'account:login' %}">Zaloguj</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

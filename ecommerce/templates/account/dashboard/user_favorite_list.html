@@ -1,0 +1,43 @@
+{% extends '../sub_base.html' %}
+{% block title %}Ulubione produkty{% endblock %}
+
+{% block sub_content %}
+<div class="col-12 mx-auto">
+  <h2 class = "h3">List ulubionych produktów</h2>
+   <div>Zarządzaj swoja lista</div> 
+  <hr />
+
+{% if favorite %}
+ {% for product in favorite %}
+
+  <div class="card mb-3 rounded-0">
+    <div class="row g-0">
+      <div class="col-md-2">
+        {% for image in product.product_image.all  %}
+          {% if image.is_feature %}
+          <img class="img-fluid d-block p-2" width="135px" src="{{ image.image.url }}"
+            alt="{{ image.image.alt_text }}" />
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-text"><small class="text-muted">{{product.regular_price}}</small></p>
+          <a type="button" class="btn btn-primary fw500 btn-sm" href="{% url 'account:user_favorite' product.id %}">Usuń</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+ 
+ {% endfor %}
+{% else %}
+<p class='card-text'>Jeszcze nie dodałeś, żadnego produktu do listy ulubionych</p>
+{% endif %}
+
+
+
+</div>
+{% endblock %}
