@@ -1,0 +1,17 @@
+{
+  "name": "django-ecommerce",
+  "description": "Python and Django ecommerce project",
+  "repository": "https://github.com/marcinpelszyk/Django/tree/main/ecommerce",
+  "keywords": [
+      "e-commerce",
+      "ecommerce",
+      "django",
+      "python"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python.git"
+    }
+  ],
+  "success_url": "/"
+}

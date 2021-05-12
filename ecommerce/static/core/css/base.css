@@ -73,8 +73,7 @@ html, body, p, div{
 
 /* Basket Menu */
 
-.basket-qty
-{
+.basket-qty{
     color: #fff;
     background: #d42114;
     border: 2px solid #fff;
@@ -93,13 +92,11 @@ html, body, p, div{
     right: 10px;
 }
 
-.basket-btn
-{
+.basket-btn{
     position: relative;
 }
 
-.basket-btn:hover, .basket-btn:focus, .basket-btn:active, .basket-btn.active
-{
+.basket-btn:hover, .basket-btn:focus, .basket-btn:active, .basket-btn.active{
     color:#d42114;
     transition-duration: 0.4s;
     background-color: #fff;
