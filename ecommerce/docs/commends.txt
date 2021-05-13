@@ -10,3 +10,20 @@ pip install paypal-checkout-serversdk
 from django.contrib.sessions.models import Session
 s = Session.objects.get(pk='ye8evivr1r9rbdgj8tkkbtqr33t7fr56')
 s.get_decoded()
+
+
+#Pytest
+
+pytest a_directory                     # directory
+pytest test_something.py               # tests file
+pytest test_something.py::single_test  # single test function
+pytest tests/account/test_account.py::test_function_fixture1  -m "views" -rP
+
+Extra summary info can be shown using the '-r' option:
+pytest -rP
+shows the captured output of passed tests.
+pytest -rx
+pytest -sv
+pytest -m "views" -rP
+
+coverage run -m pytest 
