@@ -67,6 +67,10 @@ def delete_user(request):
 
 
 def account_register(request):
+
+    if request.user.is_authenticated:
+        return redirect("account:dashboard")
+
     if request.method == 'POST':
         registerForm = RegistrationForm(request.POST)
         if registerForm.is_valid():
@@ -85,6 +89,8 @@ def account_register(request):
             })
             user.email_user(subject=subject, message=message)
             return render(request, 'account/registration/register_email_confirm.html', {'form': registerForm})
+        else:
+            return HttpResponse("Error handler content", status=400)
     else:
         registerForm = RegistrationForm()
 
@@ -126,6 +132,8 @@ def add_address(request):
             address_form.customer = request.user
             address_form.save()
             return HttpResponseRedirect(reverse("account:addresses"))
+        else:
+            return HttpResponse('Error handler content', status=400)
     else:
         address_form = UserAddressForm()
     return render(request, "account/dashboard/edit_addresses.html", {"form": address_form})

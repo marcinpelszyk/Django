@@ -1,35 +1,35 @@
 import factory
-
-from faker import Faker
-fake = Faker()
-
-from ecommerce.apps.account.models import Customer, Address
+from ecommerce.apps.account.models import Address, Customer
 from ecommerce.apps.catalogue.models import (
     Category,
-    ProductType, 
+    Product,
     ProductSpecification,
     ProductSpecificationValue,
-    Product,
-      )
+    ProductType,
+)
+from faker import Faker
 
+fake = Faker()
 
 ####
 # Catalogue
 ####
 
+
 class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Category
 
-    name = "Oleje"
-    slug = "oleje"
+    name = "django"
+    slug = "django"
+
 
 class ProductTypeFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = ProductType
+        django_get_or_create = ("name",)
 
-    name = 'miody'
-
+    name = "book"
 
 
 class ProductSpecificationFactory(factory.django.DjangoModelFactory):
@@ -39,18 +39,21 @@ class ProductSpecificationFactory(factory.django.DjangoModelFactory):
     product_type = factory.SubFactory(ProductTypeFactory)
     name = "pages"
 
+
 class ProductFactory(factory.django.DjangoModelFactory):
+    
     class Meta:
         model = Product
 
     product_type = factory.SubFactory(ProductTypeFactory)
     category = factory.SubFactory(CategoryFactory)
-    title = 'product_title'
+    title = "product_title"
     description = fake.text()
-    slug = 'product_slug'
-    reqular_price = '9.99'
-    discount_price = '4.99'
+    slug = "product_slug"
+    reqular_price = "9.99"
+    discount_price = "4.99"
     tax_rate = 1
+
 
 class ProductSpecificationValueFactory(factory.django.DjangoModelFactory):
     class Meta:
@@ -58,7 +61,7 @@ class ProductSpecificationValueFactory(factory.django.DjangoModelFactory):
 
     product = factory.SubFactory(ProductFactory)
     specification = factory.SubFactory(ProductSpecificationFactory)
-    value = 'oleje z dupy'
+    value = "olej"
 
 
 ####
@@ -72,7 +75,7 @@ class CustomerFactory(factory.django.DjangoModelFactory):
 
     email = "a@a.com"
     name = "user1"
-    mobile = "666777333"
+    # mobile = "07525251252"
     password = "tester"
     is_active = True
     is_staff = False
