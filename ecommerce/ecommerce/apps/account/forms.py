@@ -77,7 +77,7 @@ class RegistrationForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data['email']
         if Customer.objects.filter(email=email).exists():
-            raise forms.ValidationError('użyj innego adresu e-mail')
+            raise forms.ValidationError('Użyj innego adresu e-mail')
         return email
 
 

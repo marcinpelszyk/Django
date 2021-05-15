@@ -10,9 +10,9 @@
         Błąd: nazwa użytkownika lub hasło nie są poprawne!
     </div>
     {% endif %}
-    <label class="form-label">{{ form.username.label}}</label>
+    <label class="form-label">{{ form.username.label }}</label>
     {{ form.username }}
-    <label class="form-label">{{ form.password.label}}</label>
+    <label class="form-label">{{ form.password.label }}</label>
     {{ form.password}}
     <div class="d-grid gap-2">
         <input type="hidden" name="next" value="{{ next }}">

@@ -2,14 +2,14 @@ from django.contrib import admin
 from django.forms import forms
 from mptt.admin import MPTTModelAdmin
 
-from .models import (Category, Product, ProductImage, ProductsSpecification,
-                     ProductsSpecificationValue, ProductType)
+from .models import (Category, Product, ProductImage, ProductSpecification,
+                     ProductSpecificationValue, ProductType)
 
 admin.site.register(Category, MPTTModelAdmin)
 
 
 class ProductSpecificationInline(admin.TabularInline):
-    model = ProductsSpecification
+    model = ProductSpecification
 
 
 @admin.register(ProductType)
@@ -24,7 +24,7 @@ class ProductImageInline(admin.TabularInline):
 
 
 class ProductSpecificationValueInline(admin.TabularInline):
-    model = ProductsSpecificationValue
+    model = ProductSpecificationValue
 
 
 @admin.register(Product)

@@ -67,7 +67,6 @@ def delete_user(request):
 
 
 def account_register(request):
-
     if request.method == 'POST':
         registerForm = RegistrationForm(request.POST)
         if registerForm.is_valid():

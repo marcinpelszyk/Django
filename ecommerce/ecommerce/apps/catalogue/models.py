@@ -50,7 +50,7 @@ class ProductType(models.Model):
         return self.name
     
 
-class ProductsSpecification(models.Model):
+class ProductSpecification(models.Model):
     """
     The Product Specification Table contains product
     specifiction or features for the product types.
@@ -135,13 +135,13 @@ class Product(models.Model):
 
 
 
-class ProductsSpecificationValue(models.Model):
+class ProductSpecificationValue(models.Model):
     """
     The Product Specification Value table holds each of the
     products individual specification or bespoke features.
     """
     product = models.ForeignKey(Product, on_delete=models.RESTRICT)
-    specification = models.ForeignKey(ProductsSpecification, on_delete=models.RESTRICT)
+    specification = models.ForeignKey(ProductSpecification, on_delete=models.RESTRICT)
     value = models.CharField(
         verbose_name=_('value'),
         help_text=_('Product specification value (maximum of 255 words)'),
