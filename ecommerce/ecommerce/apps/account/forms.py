@@ -26,7 +26,7 @@ class UserAddressForm(forms.ModelForm):
             {"class": "form-control mb-2 account-form", "placeholder": "Miasto"}
         )
         self.fields["postcode"].widget.attrs.update(
-            {"class": "form-control mb-2 account-form", "placeholder": "kod pocztowy"}
+            {"class": "form-control mb-2 account-form", "placeholder": "kod pocztow"}
         )
 
 

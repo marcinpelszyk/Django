@@ -1,4 +1,7 @@
+import django_heroku
+
 import os
+
 
 from pathlib import Path
 
@@ -15,7 +18,7 @@ SECRET_KEY = '-fhzppjo0y-b%irfy=smks3)*r^l4wwo1)ks&rola#e4iu9gif'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecoomerce-next-drf.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -83,10 +86,16 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dffp80s22uvp92',
+        'HOST': 'ec2-108-128-104-50.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'oioephxrzibqec',
+        'PASSWORD': '6d317d88b2e31a7132a09bfd9463f4c806e025faa0b4748eec87680a87656532'
     }
 }
+
+
 
 
 
@@ -156,3 +165,7 @@ GRAPH_MODELS = {
 }
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
